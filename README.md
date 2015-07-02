@@ -3,7 +3,7 @@ Kaggle-Bag of Words Meets Bags of Popcorn
 
 This is the source code of my submission for the Kaggle competition "Bag of Words Meets Bags of Popcorn" (https://www.kaggle.com/c/word2vec-nlp-tutorial). The public leaderboard AUC score is 0.97568.
 
-The model is **two-step ensemble model**. The first step is a weighted-avergae ensemble of *Bag-of-Words*, *Word2Vec*, *Doc2Vec* and *NBSVM* using logistic regression (WA). The seconed step is a weighted-average ensemble of WA and its two *modifications*.
+The model is **two-step ensemble model**. The first step is a weighted-avergae ensemble of *Bag-of-Words*, *Word2Vec*, *Doc2Vec* and *NBSVM* using logistic regression (denoted by WA). The second step is a weighted-average ensemble of WA and its two *modifications*.
 
 Two modifications : 1) if the probability given by the average ensemble is greater than 0.5, the maximum probability of four differenct classifiers is chosen; if the probability given by the average ensemble is less than 0.5, the minimum probability of four differenct classifiers is chosen. 2) if the probability given by the weighted-average ensemble is greater than 0.5, the maximum probability of four differenct classifiers is chosen; if the probability given by the weighted-average ensemble is less than 0.5, the minimum probability of four differenct classifiers is chosen. The reason is that the output of the positive sample is as close to 1 as possible, and the output of the negative sample is as close to 0 as possible.
 
