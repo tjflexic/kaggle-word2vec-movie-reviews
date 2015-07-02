@@ -7,6 +7,7 @@ The model is **two-step ensemble model**. The first step is a weighted-avergae e
 
 Two modifications : 1) if the probability given by the average ensemble is greater than 0.5, the maximum probability of four differenct classifiers is chosen; if the probability given by the average ensemble is less than 0.5, the minimum probability of four differenct classifiers is chosen. 2) if the probability given by the weighted-average ensemble is greater than 0.5, the maximum probability of four differenct classifiers is chosen; if the probability given by the weighted-average ensemble is less than 0.5, the minimum probability of four differenct classifiers is chosen. The reason is that the output of the positive sample is as close to 1 as possible, and the output of the negative sample is as close to 0 as possible.
 
+The performance of the two-step ensemble is **a little better** than that of the first ensemble.
 
 # How to run #
 
@@ -20,6 +21,4 @@ python generate_d2v.py
 ```
 python predict.py
 ```
-
-
 
